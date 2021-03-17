@@ -10,7 +10,7 @@ interface empFormPropTypes{
     setNameValue:(event: React.ChangeEvent<HTMLInputElement>)=>void,
     setEmpidValue:(event: React.ChangeEvent<HTMLInputElement>)=>void,
     setAgeValue:(event: React.ChangeEvent<HTMLInputElement>)=>void,
-    handleSubmit:(event: React.FormEvent<HTMLInputElement>)=>void
+    handleSubmit:(event: React.FormEvent)=>void
 }
 class EmpForm extends React.Component<empFormPropTypes> {
   render() {

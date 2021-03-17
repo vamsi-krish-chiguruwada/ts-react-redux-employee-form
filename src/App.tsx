@@ -4,14 +4,14 @@ import EmpForm from "./Components/empForm/empForm";
 
 import store from "./redux/reduxForm";
 import { submitDetails } from "./redux/reduxForm";
-
+import EmpTable from "./Components/empTable/empTable";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 interface MyState {
   name: string;
   empId: string;
   age: number | null;
 }
-
 
 class App extends React.Component {
   state: MyState = {
@@ -50,15 +50,36 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className="App">
-        <EmpForm
-          state={this.state}
-          setNameValue={this.setNameValue}
-          setEmpidValue={this.setEmpidValue}
-          setAgeValue={this.setAgeValue}
-          handleSubmit={this.handleSubmit}
-        />
-      </div>
+      <Router>
+        <div className="App">
+          <nav>
+            <Link to="/">
+              <button>home</button>
+            </Link>
+
+            <Link to="/table">
+              <button>table</button>
+            </Link>
+          </nav>
+
+          <Switch>
+            <Route path="/table">
+              <EmpTable store={store} />
+            </Route>
+
+            <Route path="/">
+              <EmpForm
+                state={this.state}
+                setNameValue={this.setNameValue}
+                setEmpidValue={this.setEmpidValue}
+                setAgeValue={this.setAgeValue}
+                handleSubmit={this.handleSubmit}
+              />
+            </Route>
+          </Switch>
+          {/* <EmpTable store={store}/> */}
+        </div>
+      </Router>
     );
   }
 }
