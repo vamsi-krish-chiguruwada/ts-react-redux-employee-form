@@ -1,5 +1,11 @@
 # ts-react-redux-employee-form
 
+https://vamsi-krish-chiguruwada.github.io/ts-react-redux-employee-form.io/
+
+
+![image](https://user-images.githubusercontent.com/46754181/111542690-127ea300-8798-11eb-881a-af4ad4972813.png)
+
+
 2nd commit:
   erroe at onSubmit event type
   C:/Users/vamsi.krishna/Desktop/workplace/BAKKT/Tasks/Arun/redux-ts-react-emp-task/src/Components/empForm/empForm.tsx
